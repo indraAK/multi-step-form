@@ -1,5 +1,6 @@
 import { useSubScriptionStepForm } from "../../stores/subscription";
 import Card from "../Card";
+import iconCheckmark from "../../assets/images/icon-checkmark.svg";
 
 const addOnsList = [
   {
@@ -81,7 +82,7 @@ export default function SelectAddOns() {
                   />
                   <label htmlFor={addOn.name} className="label-checkbox">
                     <img
-                      src="/src/assets/images/icon-checkmark.svg"
+                      src={iconCheckmark}
                       alt="Icon Checkmark"
                       className="icon"
                     />

@@ -1,10 +1,13 @@
 import { useSubScriptionStepForm } from "../../stores/subscription";
 import Card from "../Card";
+import iconAdvanced from "../../assets/images/icon-advanced.svg";
+import iconArcade from "../../assets/images/icon-arcade.svg";
+import iconPro from "../../assets/images/icon-pro.svg";
 
 const plans = [
   {
     id: 1,
-    icon: "/src/assets/images/icon-arcade.svg",
+    icon: iconArcade,
     name: "Arcade",
     price: {
       monthly: 9,
@@ -13,7 +16,7 @@ const plans = [
   },
   {
     id: 2,
-    icon: "/src/assets/images/icon-advanced.svg",
+    icon: iconAdvanced,
     name: "Advanced",
     price: {
       monthly: 12,
@@ -22,7 +25,7 @@ const plans = [
   },
   {
     id: 3,
-    icon: "/src/assets/images/icon-pro.svg",
+    icon: iconPro,
     name: "Pro",
     price: {
       monthly: 15,
