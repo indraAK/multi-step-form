@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: hsl(217, 100%, 97%);
+  }
+}
+
+@layer components {
+  .input-field {
+    @apply block w-full px-3 py-2 rounded text-base font-ubuntu border border-slate-300 text-slate-800 placeholder:text-[15px] placeholder:text-slate-400 focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-100;
+  }
+
+  .input-field.invalid {
+    @apply border-red-500 focus:border-red-500 focus:ring-1 focus:ring-red-100 !important;
+  }
+}
+
+#root {
+  @apply min-h-screen md:grid md:place-items-center md:py-5 md:px-4;
+}
+
+.label-checkbox {
+  @apply bg-transparent w-5 h-5 rounded grid place-items-center border border-slate-300 cursor-pointer;
+}
+
+.custom-checkbox-wrapper .icon {
+  @apply invisible;
+}
+
+.custom-checkbox-wrapper input[type="checkbox"]:checked ~ .label-checkbox {
+  @apply bg-blue-700 border-blue-700;
+}
+
+.custom-checkbox-wrapper
+  input[type="checkbox"]:checked
+  ~ .label-checkbox
+  > .icon {
+  @apply visible;
+}
